@@ -14,6 +14,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/BallController.gd"
 }, {
+"base": "Spatial",
+"class": "Bullet",
+"language": "GDScript",
+"path": "res://3D/Ennemies/Bullet/Scripts/Bullet.gd"
+}, {
 "base": "Camera",
 "class": "FollowCamera",
 "language": "GDScript",
@@ -21,6 +26,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "BallController": "",
+"Bullet": "",
 "FollowCamera": ""
 }
 

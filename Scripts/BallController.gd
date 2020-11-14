@@ -3,13 +3,7 @@ class_name BallController
 
 export(float) var strength = 1
 
-onready var rb: RigidBody = $"BallRB"
-onready var core: MeshInstance = $"BallRB/BallMesh/CoreMesh"
-
-var _initial_position
-
-func _ready():
-	_initial_position = get_global_transform().origin
+onready var rb: RigidBody = $"BallRB" as RigidBody
 
 func get_torque() -> Vector3: 
 	var right = Input.get_action_strength("ui_right")
@@ -21,11 +15,15 @@ func get_torque() -> Vector3:
 	return Vector3(y * strength, 0, x * strength)
 
 
-func _physics_process(delta) -> void:
+func _physics_process(_delta : float) -> void:
 	rb.add_torque(get_torque())
 
+func restart() -> void:
+	var error = get_tree().reload_current_scene()
+	if (error):
+		printerr(error)
 
-func _on_Area_body_entered(body):
-	print("Reseting due to death by falling")
-	get_tree().reload_current_scene()
 
+func _on_BallRB_body_entered(body : PhysicsBody):
+	if (body.collision_layer & 4 != 0):
+		restart()
