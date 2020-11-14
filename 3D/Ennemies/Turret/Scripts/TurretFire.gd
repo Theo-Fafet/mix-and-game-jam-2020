@@ -1,5 +1,7 @@
 extends Spatial
 
+class_name Turret
+
 export(float) var fire_rate = 1
 export(float) var bullet_speed = 1
 
@@ -17,3 +19,6 @@ func shoot() -> void:
 	bullet.velocity = bullet_speed * $TurretBase/TurretProbe.transform.basis.z
 	bullet.translation = $TurretBase/TurretProbe.translation + $TurretBase/TurretProbe.transform.basis.z/2
 	call_deferred("add_child", bullet)
+	
+func rotate(axis:Vector3,angle: float) -> void:
+	$TurretBase/TurretProbe.transform.basis = $TurretBase/TurretProbe.transform.basis.rotated(axis, PI/60)

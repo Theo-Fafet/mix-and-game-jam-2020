@@ -23,11 +23,17 @@ _global_script_classes=[ {
 "class": "FollowCamera",
 "language": "GDScript",
 "path": "res://Scripts/FollowCamera.gd"
+}, {
+"base": "Spatial",
+"class": "Turret",
+"language": "GDScript",
+"path": "res://3D/Ennemies/Turret/Scripts/TurretFire.gd"
 } ]
 _global_script_class_icons={
 "BallController": "",
 "Bullet": "",
-"FollowCamera": ""
+"FollowCamera": "",
+"Turret": ""
 }
 
 [application]
