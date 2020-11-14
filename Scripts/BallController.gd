@@ -26,6 +26,6 @@ func _physics_process(delta) -> void:
 
 
 func _on_Area_body_entered(body):
-	print("Reseting due to death")
+	print("Reseting due to death by falling")
 	get_tree().reload_current_scene()
-	pass # Replace with function body.
+
