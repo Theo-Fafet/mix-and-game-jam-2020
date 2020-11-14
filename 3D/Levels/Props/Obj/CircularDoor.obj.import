@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/CircularDoor.obj-15bc86588f26552ac86940085b05de76.mesh"
+
+[deps]
+
+files=[ "res://.import/CircularDoor.obj-15bc86588f26552ac86940085b05de76.mesh" ]
+
+source_file="res://3D/Levels/Props/Obj/CircularDoor.obj"
+dest_files=[ "res://.import/CircularDoor.obj-15bc86588f26552ac86940085b05de76.mesh", "res://.import/CircularDoor.obj-15bc86588f26552ac86940085b05de76.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

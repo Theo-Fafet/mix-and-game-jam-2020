@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://3D/Levels/Props/Nodes/Slope.tscn" type="PackedScene" id=1]
 [ext_resource path="res://3D/Levels/Props/Nodes/Platform_1x1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://3D/Levels/Props/Nodes/Platform_2x2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://3D/Levels/Props/Nodes/Platform_1x2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://3D/Levels/Props/Nodes/Pipe_Quarter.tscn" type="PackedScene" id=5]
+[ext_resource path="res://3D/Levels/Props/Nodes/Wipers.tscn" type="PackedScene" id=6]
 
 [node name="Level 0" type="Spatial"]
 
@@ -41,3 +43,33 @@ transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1, 0, 
 
 [node name="Platform_2x2" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1, 0, 12 )
+
+[node name="Pipe_Quarter" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, -8.74228e-08, -8.74228e-08, -8.74228e-08, -1, 0, -8.74228e-08, 7.64274e-15, -1, -1, 0, 13.5 )
+
+[node name="Pipe_Quarter2" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 1.74846e-07, -8.74228e-08, -1, 0, 1.74846e-07, -1.52855e-14, 1, -1, 0, 19.5 )
+
+[node name="Pipe_Quarter4" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, -8.74228e-08, -8.74228e-08, -8.74228e-08, -1, 0, -8.74228e-08, 7.64274e-15, -1, -2, 0, 13.5 )
+
+[node name="Pipe_Quarter3" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 1.74846e-07, -8.74228e-08, -1, 0, 1.74846e-07, -1.52855e-14, 1, -2, 0, 19.5 )
+
+[node name="Pipe_Quarter6" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, -8.74228e-08, -8.74228e-08, -8.74228e-08, -1, 0, -8.74228e-08, 7.64274e-15, -1, -2.38419e-07, 0, 13.5 )
+
+[node name="Pipe_Quarter5" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 1.74846e-07, -8.74228e-08, -1, 0, 1.74846e-07, -1.52855e-14, 1, -2.38419e-07, 0, 19.5 )
+
+[node name="Platform_1x1 3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.5, 19.5 )
+
+[node name="Platform_1x1 4" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1, 0.5, 19.5 )
+
+[node name="Platform_1x1 5" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2, 0.5, 19.5 )
+
+[node name="Wipers" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.3, 4 )

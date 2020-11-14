@@ -23,5 +23,3 @@ shape = SubResource( 1 )
 
 [node name="Turret" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -1.19209e-07, 0, 1, 0, 1.19209e-07, 0, -1, 0, 0, 3 )
-fire_rate = 5.0
-bullet_speed = 10.0

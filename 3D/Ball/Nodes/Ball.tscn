@@ -21,7 +21,7 @@ collision_mask = 7
 continuous_cd = true
 contacts_reported = 5
 contact_monitor = true
-can_sleep = false
+angular_damp = 0.3
 
 [node name="SphereCS" type="CollisionShape" parent="BallRB"]
 shape = SubResource( 1 )
