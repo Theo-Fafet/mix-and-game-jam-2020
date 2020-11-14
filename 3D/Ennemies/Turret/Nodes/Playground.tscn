@@ -30,15 +30,20 @@ shape = SubResource( 2 )
 
 [node name="Turret" parent="." instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4, 0, 0 )
-fire_rate = 0.3
-bullet_speed = 10.0
+fire_rate = 3.0
+bullet_speed = 20.0
 
 [node name="Turret2" parent="." instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, 0 )
-fire_rate = 0.3
-bullet_speed = 10.0
+transform = Transform( 0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, -4, 0, 0 )
+fire_rate = 0.2
+bullet_speed = 7.0
 
 [node name="Turret3" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 4 )
-fire_rate = 0.3
-bullet_speed = 10.0
+fire_rate = 5.0
+bullet_speed = 50.0
+
+[node name="ChangeRot" type="Timer" parent="."]
+wait_time = 1.21
+autostart = true
+[connection signal="timeout" from="ChangeRot" to="." method="_on_ChangeRot_timeout"]
