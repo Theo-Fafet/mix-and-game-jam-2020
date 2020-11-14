@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://3D/Levels/Props/Obj/Platform_2x2.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://3D/Levels/Props/Materials/GroundMaterial.tres" type="Material" id=2]
+
+[sub_resource type="ConcavePolygonShape" id=1]
+data = PoolVector3Array( 1, 0, 1, -1, 0, 1, 1, 0, -1, 1, 0, -1, -1, 0, 1, -1, 0, -1, -1, 0, -1, -1, -0.5, -1, 1, 0, -1, 1, 0, -1, -1, -0.5, -1, 1, -0.5, -1, 1, 0, -1, 1, -0.5, -1, 1, 0, 1, 1, 0, 1, 1, -0.5, -1, 1, -0.5, 1, -1, -0.5, 1, 1, -0.5, 1, -1, -0.5, -1, -1, -0.5, -1, 1, -0.5, 1, 1, -0.5, -1, -1, 0, 1, -1, -0.5, 1, -1, 0, -1, -1, 0, -1, -1, -0.5, 1, -1, -0.5, -1, 1, 0, 1, 1, -0.5, 1, -1, 0, 1, -1, 0, 1, 1, -0.5, 1, -1, -0.5, 1 )
+
+[node name="Platform_2x2" type="MeshInstance"]
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+shape = SubResource( 1 )

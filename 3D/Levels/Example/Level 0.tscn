@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://3D/Levels/Props/Nodes/Slope.tscn" type="PackedScene" id=1]
+[ext_resource path="res://3D/Levels/Props/Nodes/Platform_1x1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://3D/Levels/Props/Nodes/Platform_2x2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://3D/Levels/Props/Nodes/Platform_1x2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://3D/Ennemies/Turret/Turret.fbx" type="PackedScene" id=5]
+
+[node name="Level 0" type="Spatial"]
+
+[node name="Platform_2x2 0" parent="." instance=ExtResource( 3 )]
+
+[node name="Platform_1x2 0" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
+
+[node name="Platform_1x1 0" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.5 )
+
+[node name="Platform_1x2 1" parent="." instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.5, 0, 3.5 )
+
+[node name="Slope 0" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 5 )
+
+[node name="Platform_1x1 1" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 6.5 )
+
+[node name="Slope 1" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.5, 0, 6.5 )
+
+[node name="Platform_1x1 2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 6.5 )
+
+[node name="Platform_1x2 2" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 8 )
+
+[node name="Platform_1x2 3" parent="." instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.5, 0, 8.5 )
+
+[node name="Platform_1x2 4" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1, 0, 10 )
+
+[node name="Platform_2x2" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1, 0, 12 )
+
+[node name="Turret" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://3D/Ball/Nodes/Ball.tscn" type="PackedScene" id=1]
-[ext_resource path="res://3D/Levels/Example/ExampleLevel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://3D/Levels/Example/Level 0.tscn" type="PackedScene" id=2]
 
 [node name="ExampleScene" type="Spatial"]
 
