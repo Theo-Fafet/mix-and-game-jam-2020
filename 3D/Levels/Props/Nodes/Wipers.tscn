@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://3D/Levels/Props/Obj/Wipers.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://3D/Levels/Props/Scripts/Rotor.gd" type="Script" id=2]
+
+[sub_resource type="CylinderShape" id=1]
+radius = 0.5
+height = 0.5
+
+[sub_resource type="CylinderShape" id=2]
+radius = 0.1
+height = 3.0
+
+[node name="Rotor" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="Wipers" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="Wipers"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Wipers/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Wipers/StaticBody"]
+transform = Transform( -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 2 )

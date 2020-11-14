@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Wipers.obj-b6f59e932bffe0bb3bd35e6e16f4f3bd.mesh"
+
+[deps]
+
+files=[ "res://.import/Wipers.obj-b6f59e932bffe0bb3bd35e6e16f4f3bd.mesh" ]
+
+source_file="res://3D/Levels/Props/Obj/Wipers.obj"
+dest_files=[ "res://.import/Wipers.obj-b6f59e932bffe0bb3bd35e6e16f4f3bd.mesh", "res://.import/Wipers.obj-b6f59e932bffe0bb3bd35e6e16f4f3bd.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
