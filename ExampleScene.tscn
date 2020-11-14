@@ -1,11 +1,24 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://3D/Ball/Nodes/Ball.tscn" type="PackedScene" id=1]
 [ext_resource path="res://3D/Levels/Example/Level 0.tscn" type="PackedScene" id=2]
+[ext_resource path="res://3D/Turret/Nodes/Bullet.tscn" type="PackedScene" id=3]
+
+[sub_resource type="BoxShape" id=1]
 
 [node name="ExampleScene" type="Spatial"]
 
-[node name="Spatial" parent="." instance=ExtResource( 2 )]
+[node name="Spatial" parent="." instance=ExtResource( 1 )]
 
-[node name="Ball" parent="Spatial" instance=ExtResource( 1 )]
+[node name="Ball" parent="Spatial" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0 )
+
+[node name="DeathPlane" type="Area" parent="."]
+transform = Transform( 100, 0, 0, 0, 1, 0, 0, 0, 100, 0, -10, 10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="DeathPlane"]
+shape = SubResource( 1 )
+
+[node name="Bullet" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.259064, 1.94774 )
+[connection signal="body_entered" from="DeathPlane" to="Spatial/Ball" method="_on_Area_body_entered"]
