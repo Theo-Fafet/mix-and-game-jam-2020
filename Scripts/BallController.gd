@@ -6,11 +6,6 @@ export(float) var strength = 1
 onready var rb: RigidBody = $"BallRB"
 onready var core: MeshInstance = $"BallRB/BallMesh/CoreMesh"
 
-var _initial_position
-
-func _ready():
-	_initial_position = get_global_transform().origin
-
 func get_torque() -> Vector3: 
 	var right = Input.get_action_strength("ui_right")
 	var left = Input.get_action_strength("ui_left")

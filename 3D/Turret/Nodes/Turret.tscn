@@ -15,6 +15,9 @@ __meta__ = {
 }
 
 [node name="TurretRB" type="RigidBody" parent="."]
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
 
 [node name="SphereCS" type="CollisionShape" parent="TurretRB"]
 shape = SubResource( 1 )
@@ -25,4 +28,5 @@ material/0 = ExtResource( 3 )
 material/1 = ExtResource( 4 )
 
 [node name="Timer" type="Timer" parent="."]
+autostart = true
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

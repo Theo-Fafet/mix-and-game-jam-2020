@@ -4,7 +4,7 @@ extends Spatial
 # var a = 2
 # var b = "text"
 onready var rb: RigidBody = $"BulletRB"
-onready var direction: Vector3 = Vector3(0,0,-1)
+export(Vector3) var direction = Vector3(0,0,-1)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
