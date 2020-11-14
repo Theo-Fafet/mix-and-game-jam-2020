@@ -15,6 +15,7 @@ radius = 0.25
 height = 0.15
 
 [node name="Turret" type="Spatial"]
+script = ExtResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
@@ -24,12 +25,10 @@ mesh = ExtResource( 2 )
 material/0 = null
 
 [node name="TurretProbe" type="MeshInstance" parent="TurretBase"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.4, 0 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
-script = ExtResource( 1 )
-bullet_speed = 5.0
 
 [node name="StaticBody" type="StaticBody" parent="TurretBase/TurretProbe"]
 
@@ -45,4 +44,4 @@ shape = SubResource( 5 )
 [node name="CollisionShape" type="CollisionShape" parent="TurretBase/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.075, 0 )
 shape = SubResource( 3 )
-[connection signal="timeout" from="Timer" to="TurretBase/TurretProbe" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

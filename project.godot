@@ -25,6 +25,11 @@ _global_script_classes=[ {
 "path": "res://Scripts/FollowCamera.gd"
 }, {
 "base": "Spatial",
+"class": "Rotor",
+"language": "GDScript",
+"path": "res://3D/Levels/Props/Scripts/Rotor.gd"
+}, {
+"base": "Spatial",
 "class": "Turret",
 "language": "GDScript",
 "path": "res://3D/Ennemies/Turret/Scripts/TurretFire.gd"
@@ -33,6 +38,7 @@ _global_script_class_icons={
 "BallController": "",
 "Bullet": "",
 "FollowCamera": "",
+"Rotor": "",
 "Turret": ""
 }
 

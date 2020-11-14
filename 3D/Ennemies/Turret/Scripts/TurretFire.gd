@@ -11,13 +11,12 @@ func _ready() -> void:
 	$Timer.wait_time = fire_rate
 
 func _on_Timer_timeout() -> void:
-
 	shoot()
 
 func shoot() -> void:
 	var bullet = bulletPacked.instance();
-	bullet.velocity = bullet_speed * $TurretBase/TurretProbe.transform.basis.z
-	bullet.translation = $TurretBase/TurretProbe.translation + $TurretBase/TurretProbe.transform.basis.z/2
+	bullet.velocity = bullet_speed * -$TurretBase/TurretProbe.transform.basis.z
+	bullet.translation = $TurretBase/TurretProbe.translation
 	call_deferred("add_child", bullet)
 	
 func rotate(axis:Vector3,angle: float) -> void:
