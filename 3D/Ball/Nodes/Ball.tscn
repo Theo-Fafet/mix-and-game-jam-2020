@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://3D/Ball/Obj/Ball.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://3D/Ball/Materials/Core.material" type="Material" id=2]
+[ext_resource path="res://Scripts/BallController.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/FollowCamera.gd" type="Script" id=4]
+[ext_resource path="res://3D/Ball/Materials/Ball.material" type="Material" id=5]
+
+
+[sub_resource type="SphereShape" id=1]
+radius = 0.25
+
+[node name="Ball" type="Spatial"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BallRB" type="RigidBody" parent="."]
+
+[node name="SphereCS" type="CollisionShape" parent="BallRB"]
+shape = SubResource( 1 )
+
+[node name="BallMesh" type="MeshInstance" parent="BallRB"]
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )
+material/1 = ExtResource( 5 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -1, 5.65818e-08, -3.20891e-07, 0, 0.984808, 0.173648, 3.25841e-07, 0.173648, -0.984808, 0, 1, -2 )
+script = ExtResource( 4 )
+targetPath = NodePath("../BallRB")
+smoothing = 4.0
