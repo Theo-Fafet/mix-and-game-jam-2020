@@ -11,7 +11,7 @@ func _ready() -> void:
 	$Timer.wait_time = fire_rate
 
 func _on_Timer_timeout() -> void:
-	print("shoot")
+
 	shoot()
 
 func shoot() -> void:
@@ -21,4 +21,9 @@ func shoot() -> void:
 	call_deferred("add_child", bullet)
 	
 func rotate(axis:Vector3,angle: float) -> void:
-	$TurretBase/TurretProbe.transform.basis = $TurretBase/TurretProbe.transform.basis.rotated(axis, PI/60)
+	$TurretBase/TurretProbe.transform.basis = $TurretBase/TurretProbe.transform.basis.rotated(axis, angle)
+
+func look_at(target:Vector3, up:Vector3)-> void:
+	$TurretBase/TurretProbe.look_at_from_position($TurretBase/TurretProbe.global_transform.origin,target,up)
+	pass
+	
