@@ -57,7 +57,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Mix and Game Jam 2020"
-run/main_scene="res://ExampleScene.tscn"
+run/main_scene="res://3D/Levels/Level 1/Level1.tscn"
 config/icon="res://icon.png"
 
 [autoload]

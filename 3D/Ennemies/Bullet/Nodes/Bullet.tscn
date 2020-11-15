@@ -4,11 +4,11 @@
 
 [sub_resource type="SphereShape" id=1]
 margin = 0.001
-radius = 0.04
+radius = 0.08
 
 [sub_resource type="SphereMesh" id=2]
-radius = 0.04
-height = 0.08
+radius = 0.08
+height = 0.16
 radial_segments = 8
 rings = 8
 
@@ -22,11 +22,10 @@ autostart = true
 
 [node name="BulletRB" type="RigidBody" parent="."]
 collision_layer = 4
-mode = 3
 mass = 0.0459184
 gravity_scale = 0.0
 continuous_cd = true
-contacts_reported = 5
+contacts_reported = 1
 contact_monitor = true
 can_sleep = false
 

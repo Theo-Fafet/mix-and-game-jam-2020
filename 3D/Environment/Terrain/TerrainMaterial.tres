@@ -6,7 +6,6 @@
 [ext_resource path="res://3D/Environment/Terrain/Textures/aerial_rocks_02_2k/aerial_rocks_02_ao_2k.jpg" type="Texture" id=4]
 [ext_resource path="res://3D/Environment/Terrain/Textures/aerial_rocks_02_2k/aerial_rocks_02_nor_2k.jpg" type="Texture" id=5]
 
-
 [resource]
 albedo_texture = ExtResource( 1 )
 metallic_specular = 0.0
