@@ -1,563 +1,204 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://3D/Levels/Props/Nodes/Platform_2x2.tscn" type="PackedScene" id=1]
-[ext_resource path="res://3D/Ball/Nodes/Ball.tscn" type="PackedScene" id=2]
+[ext_resource path="res://3D/Levels/Props/Nodes/Slope.tscn" type="PackedScene" id=2]
 [ext_resource path="res://3D/Levels/Props/Nodes/Platform_1x1.tscn" type="PackedScene" id=3]
-[ext_resource path="res://3D/Levels/Props/Nodes/CircularDoor.tscn" type="PackedScene" id=4]
+[ext_resource path="res://3D/Levels/Level 3/Level 3.gd" type="Script" id=4]
 [ext_resource path="res://3D/Levels/Props/Nodes/Platform_1x2.tscn" type="PackedScene" id=5]
 [ext_resource path="res://3D/Levels/Props/Nodes/Pipe_Quarter.tscn" type="PackedScene" id=6]
 [ext_resource path="res://3D/Ennemies/Turret/Nodes/Turret.tscn" type="PackedScene" id=7]
-[ext_resource path="res://3D/Levels/Props/Scripts/Rotor.gd" type="Script" id=8]
-[ext_resource path="res://3D/Levels/Props/Nodes/Elevator.tscn" type="PackedScene" id=9]
-[ext_resource path="res://3D/Levels/Level 3/Level 3.gd" type="Script" id=10]
+[ext_resource path="res://3D/Ball/Nodes/Ball.tscn" type="PackedScene" id=8]
+[ext_resource path="res://3D/Levels/Level 4/Level 4.tscn" type="PackedScene" id=9]
 [ext_resource path="res://3D/Levels/Props/Nodes/FinishHole.tscn" type="PackedScene" id=11]
 
-[sub_resource type="BoxShape" id=1]
-
 [node name="Spatial" type="Spatial"]
-script = ExtResource( 10 )
+script = ExtResource( 4 )
 
 [node name="Platform_2x2" parent="." instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 27, 10 )
+transform = Transform( 1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 27, -30 )
+
+[node name="Pipe_Quarter" parent="Platform_2x2" instance=ExtResource( 6 )]
+transform = Transform( -5.61271e-07, 8.22324e-08, 1, -2.58819, -0.965926, 6.49036e-08, 9.65926, -0.258819, 7.54979e-08, 3, 0.999998, 8 )
+
+[node name="Pipe_Quarter2" parent="Platform_2x2" instance=ExtResource( 6 )]
+transform = Transform( -5.61271e-07, -8.22324e-08, -1, 2.58819, -0.965926, 6.49036e-08, -9.65926, -0.258819, 7.54979e-08, -3, 0.999998, 8 )
+
+[node name="Pipe_Quarter3" parent="Platform_2x2" instance=ExtResource( 6 )]
+transform = Transform( 9.65926, -0.258819, 3.17865e-08, -2.58819, -0.965926, 6.49036e-08, 1.39051e-07, -7.0919e-08, -1, 3, -6, 11 )
+
+[node name="Pipe_Quarter4" parent="Platform_2x2" instance=ExtResource( 6 )]
+transform = Transform( -9.65926, -0.258819, 1.19209e-07, 2.58819, -0.965926, 6.49036e-08, 9.83491e-07, 9.35457e-08, 1, 3, -6, 17 )
+
+[node name="Pipe_Quarter5" parent="Platform_2x2" instance=ExtResource( 6 )]
+transform = Transform( 0.00524903, -0.000261256, -1, 6.35978, -0.905669, 0.000384979, -13.585, -0.423985, -0.000206157, 5, -13, 17 )
+
+[node name="Pipe_Quarter6" parent="Platform_2x2" instance=ExtResource( 6 )]
+transform = Transform( 2.83767e-06, 2.01898e-08, 1, -6.33928, -0.906308, 9.82482e-08, 13.5946, -0.422618, -1.62921e-07, 13, -13, 17 )
+
+[node name="Platform_1x3" parent="Platform_2x2/Pipe_Quarter6" instance=ExtResource( 3 )]
+transform = Transform( 0.5, 0, 2.66454e-12, 0, 1, 1.0516e-12, -1.47793e-12, -5.40012e-13, 2, 0.241008, 3.50602, -3.99999 )
+
+[node name="Platform_1x2" parent="Platform_2x2/Pipe_Quarter6" instance=ExtResource( 3 )]
+transform = Transform( 0.2, 2.38419e-07, 2.45737e-12, 0, 1, 4.92051e-13, -2.66454e-13, -3.25073e-13, 2, -0.398824, 3.51474, -4 )
+
+[node name="Pipe_Quarter7" parent="Platform_2x2" instance=ExtResource( 6 )]
+transform = Transform( -2.31049e-07, -1.19179e-07, -1, 4.22618, -0.906308, 9.82482e-08, -9.06308, -0.422618, 7.13073e-08, 5, -19, 32 )
+
+[node name="Platform_2x5" parent="Platform_2x2" instance=ExtResource( 1 )]
+transform = Transform( 2.871e-07, 8.22322e-08, 2, -2.98023e-07, -1, 1.64464e-07, 2, 2.23517e-06, -2.87075e-07, 9, -26.8597, 38.1496 )
+
+[node name="Platform_1x1" parent="Platform_2x2/Platform_2x5" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 1.45009e-16, 0, -5.57226e-16, 1, 1.5, -3.12924e-07, 0.992223 )
+
+[node name="Platform_1x3" parent="Platform_2x2/Platform_2x5" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 1.45009e-16, 0, -5.57226e-16, 1, 2.5, -7.7486e-07, -0.00777769 )
+
+[node name="Platform_1x4" parent="Platform_2x2/Platform_2x5" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 1.45009e-16, 0, -5.57226e-16, 1, 2.5, -6.10948e-07, 0.992222 )
+
+[node name="Platform_1x5" parent="Platform_2x2/Platform_2x5" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 1.45009e-16, 0, -5.57226e-16, 1, 2.5, -9.38773e-07, -1.00778 )
+
+[node name="Platform_1x2" parent="Platform_2x2/Platform_2x5" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 1.45009e-16, 0, -5.57226e-16, 1, 1.5, -6.4075e-07, -0.984058 )
+
+[node name="Platform_2x6" parent="Platform_2x2" instance=ExtResource( 1 )]
+transform = Transform( 2.871e-07, 8.22322e-08, 2, -2.98023e-07, -1, 1.64464e-07, 2, 2.23517e-06, -2.87075e-07, 9, -26.8597, 38.1496 )
+
+[node name="Platform_1x1" parent="Platform_2x2/Platform_2x6" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 1.45009e-16, 0, -5.57226e-16, 1, 1.5, -3.12924e-07, 0.992223 )
+
+[node name="Platform_1x3" parent="Platform_2x2/Platform_2x6" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 1.45009e-16, 0, -5.57226e-16, 1, 2.5, -7.7486e-07, -0.00777769 )
+
+[node name="Platform_1x4" parent="Platform_2x2/Platform_2x6" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 1.45009e-16, 0, -5.57226e-16, 1, 2.5, -6.10948e-07, 0.992222 )
+
+[node name="Platform_1x5" parent="Platform_2x2/Platform_2x6" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 1.45009e-16, 0, -5.57226e-16, 1, 2.5, -9.38773e-07, -1.00778 )
+
+[node name="Platform_1x2" parent="Platform_2x2/Platform_2x6" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 1.45009e-16, 0, -5.57226e-16, 1, 1.5, -6.4075e-07, -0.984058 )
+
+[node name="Slope" parent="Platform_2x2/Platform_2x6" instance=ExtResource( 2 )]
+transform = Transform( -5.68255e-08, -1.1587e-06, -0.5, 6.06393e-07, 1, -5.79351e-07, 1.3, -4.66456e-07, -2.18557e-08, -7.93734, -9, 1.43051e-06 )
+
+[node name="Platform_2x7" parent="Platform_2x2" instance=ExtResource( 1 )]
+transform = Transform( 1.62921e-07, 8.22318e-08, 1, -1.50996e-07, -1, 8.22318e-08, 1, -1.50996e-07, -1.62921e-07, 9, -26.8597, 33.1496 )
+
+[node name="FinishHole" parent="Platform_2x2/Platform_2x7" instance=ExtResource( 11 )]
+transform = Transform( -1, 8.74228e-08, 3.25841e-07, -8.74227e-08, -1, 1.64464e-07, 3.25841e-07, 1.64464e-07, 1, 2.38419e-07, -0.5, 0 )
+next_level = ExtResource( 9 )
+
+[node name="Pipe_Quarter8" parent="Platform_2x2" instance=ExtResource( 6 )]
+transform = Transform( 1.35359e-06, 4.52859e-08, 1, -4.22618, -0.906308, 9.82482e-08, 9.06308, -0.422618, -1.03538e-07, 13, -19, 32 )
+
+[node name="Platform_1x1" parent="Platform_2x2/Pipe_Quarter8" instance=ExtResource( 3 )]
+transform = Transform( 0.2, 2.38419e-07, 2.4718e-12, 0, 1, 4.24549e-13, -2.54019e-13, -2.18492e-13, 2, -0.000708699, 3.53406, -4 )
+
+[node name="Platform_1x3" parent="Platform_2x2/Pipe_Quarter8" instance=ExtResource( 3 )]
+transform = Transform( 0.2, 2.38419e-07, 2.42939e-12, 0, 1, 6.22613e-13, -2.66454e-13, -5.31131e-13, 2, 0.400197, 3.49593, -4 )
+
+[node name="Platform_1x2" parent="Platform_2x2/Pipe_Quarter8" instance=ExtResource( 3 )]
+transform = Transform( 0.2, 2.38419e-07, 2.45737e-12, 0, 1, 4.92051e-13, -2.66454e-13, -3.25073e-13, 2, -0.398824, 3.51474, -4 )
+
+[node name="Platform_2x2" parent="Platform_2x2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.13163e-14, 0, -2 )
+
+[node name="Platform_2x3" parent="Platform_2x2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
+
+[node name="Platform_2x4" parent="Platform_2x2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0 )
+
+[node name="Platform_1x1" parent="Platform_2x2" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -1.5 )
+
+[node name="Platform_1x2" parent="Platform_2x2" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -1.5 )
 
 [node name="Platform_1x2" parent="." instance=ExtResource( 5 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9, 27, 10 )
-
-[node name="Ball" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 27.5, 10 )
-
-[node name="DeathPlane" type="StaticBody" parent="."]
-transform = Transform( 100, 0, 0, 0, 1, 0, 0, 0, 100, 0, -7, 0 )
-collision_layer = 5
-collision_mask = 7
-
-[node name="CollisionShape" type="CollisionShape" parent="DeathPlane"]
-shape = SubResource( 1 )
-
-[node name="Turret6" parent="." instance=ExtResource( 7 )]
-transform = Transform( 0.9, 0, 0, 0, 0.9, -8.52651e-13, 0, 0, 1, 1.49012e-08, 21.7257, 10.5 )
-fire_rate = 3.0
-bullet_speed = 2.0
-
-[node name="Platform_1x3" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 21.7257, 15.5 )
-
-[node name="Turret" parent="Platform_1x3" instance=ExtResource( 7 )]
-transform = Transform( -0.766044, 0, -0.642788, 0, 1, 0, 0.642788, 0, -0.766044, 0, 0, 0 )
-fire_rate = 2.0
-bullet_speed = 4.0
-
-[node name="Platform_1x20" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17.7257, 15.5 )
-
-[node name="Turret" parent="Platform_1x20" instance=ExtResource( 7 )]
-transform = Transform( -0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, -0.939693, 0, 0, 0 )
-fire_rate = 3.0
-bullet_speed = 6.0
-
-[node name="Platform_1x23" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17.7257, 5.5 )
-
-[node name="Turret" parent="Platform_1x23" instance=ExtResource( 7 )]
-transform = Transform( 0.939693, 0, -0.34202, 0, 1, 0, 0.34202, 0, 0.939693, 0, 0, 0 )
-fire_rate = 3.0
-bullet_speed = 6.0
-
-[node name="Platform_1x21" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 17.7257, 10.5 )
-
-[node name="Turret" parent="Platform_1x21" instance=ExtResource( 7 )]
-transform = Transform( -0.34202, 0, -0.939693, 0, 1, 0, 0.939693, 0, -0.34202, 0, 0, 0 )
-fire_rate = 3.0
-bullet_speed = 6.0
-
-[node name="Platform_1x22" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 17.7257, 10.5 )
-
-[node name="Turret" parent="Platform_1x22" instance=ExtResource( 7 )]
-transform = Transform( 0.34202, 0, 0.939693, 0, 1, 0, -0.939693, 0, 0.34202, 0, 0, 0 )
-fire_rate = 3.0
-bullet_speed = 6.0
-
-[node name="Platform_1x24" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.7257, 15.5 )
-
-[node name="Turret" parent="Platform_1x24" instance=ExtResource( 7 )]
-transform = Transform( -0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, -0.939693, 0, 0, 0 )
-fire_rate = 2.0
-bullet_speed = 3.0
-
-[node name="Platform_1x25" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.7257, 5.5 )
-
-[node name="Turret" parent="Platform_1x25" instance=ExtResource( 7 )]
-transform = Transform( 0.939693, 0, -0.34202, 0, 1, 0, 0.34202, 0, 0.939693, 0, 0, 0 )
-fire_rate = 2.0
-bullet_speed = 3.0
-
-[node name="Platform_1x26" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 9.7257, 10.5 )
-
-[node name="Turret" parent="Platform_1x26" instance=ExtResource( 7 )]
-transform = Transform( -0.34202, 0, -0.939693, 0, 1, 0, 0.939693, 0, -0.34202, 0, 0, 0 )
-fire_rate = 2.0
-bullet_speed = 3.0
-
-[node name="Platform_1x27" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 9.7257, 10.5 )
-
-[node name="Turret" parent="Platform_1x27" instance=ExtResource( 7 )]
-transform = Transform( 0.34202, 0, 0.939693, 0, 1, 0, -0.939693, 0, 0.34202, 0, 0, 0 )
-fire_rate = 2.0
-bullet_speed = 3.0
-
-[node name="Platform_1x28" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7257, 15.5 )
-
-[node name="Turret" parent="Platform_1x28" instance=ExtResource( 7 )]
-transform = Transform( -0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, -0.939693, 0, 0, 0 )
-
-[node name="Platform_1x29" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7257, 5.5 )
-
-[node name="Turret" parent="Platform_1x29" instance=ExtResource( 7 )]
-transform = Transform( 0.939693, 0, -0.34202, 0, 1, 0, 0.34202, 0, 0.939693, 0, 0, 0 )
-
-[node name="Platform_1x30" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.7257, 10.5 )
-
-[node name="Turret" parent="Platform_1x30" instance=ExtResource( 7 )]
-transform = Transform( -0.34202, 0, -0.939693, 0, 1, 0, 0.939693, 0, -0.34202, 0, 0, 0 )
-
-[node name="Platform_1x31" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.7257, 10.5 )
-
-[node name="Turret" parent="Platform_1x31" instance=ExtResource( 7 )]
-transform = Transform( 0.34202, 0, 0.939693, 0, 1, 0, -0.939693, 0, 0.34202, 0, 0, 0 )
-
-[node name="Platform_1x5" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 21.7257, 15.5 )
-
-[node name="Turret" parent="Platform_1x5" instance=ExtResource( 7 )]
-transform = Transform( -0.644628, -0.000895417, 0.764496, 0.000392325, 0.999999, 0.00150208, -0.764496, 0.00126822, -0.644627, -0.00716352, -1.14441e-05, 0.0101452 )
-fire_rate = 2.0
-bullet_speed = 4.0
-
-[node name="Platform_1x6" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 21.7257, 5.5 )
-
-[node name="Turret" parent="Platform_1x6" instance=ExtResource( 7 )]
-transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 0, 0, 0 )
-fire_rate = 2.0
-bullet_speed = 4.0
-
-[node name="Platform_1x11" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 21.7257, 5.5 )
-
-[node name="Turret" parent="Platform_1x11" instance=ExtResource( 7 )]
-transform = Transform( 0.644125, 0.000469581, -0.764921, -0.000600065, 1, 0.000108584, 0.76492, 0.000389052, 0.644125, 0, 0, 0 )
-fire_rate = 2.0
-bullet_speed = 4.0
-
-[node name="Platform_1x12" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 13.7257, 15.5 )
-
-[node name="Turret" parent="Platform_1x12" instance=ExtResource( 7 )]
-transform = Transform( -0.766044, 0, -0.642788, 0, 1, 0, 0.642788, 0, -0.766044, 0, 0, 0 )
-fire_rate = 2.0
-bullet_speed = 6.0
-
-[node name="Platform_1x13" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 13.7257, 15.5 )
-
-[node name="Turret" parent="Platform_1x13" instance=ExtResource( 7 )]
-transform = Transform( -0.644628, -0.000895417, 0.764496, 0.000392325, 0.999999, 0.00150208, -0.764496, 0.00126822, -0.644627, 0, 0, 0 )
-fire_rate = 2.0
-bullet_speed = 6.0
-
-[node name="Platform_1x14" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 13.7257, 5.5 )
-
-[node name="Turret" parent="Platform_1x14" instance=ExtResource( 7 )]
-transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 0, 0, 0 )
-fire_rate = 2.0
-bullet_speed = 6.0
-
-[node name="Platform_1x15" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 13.7257, 5.5 )
-
-[node name="Turret" parent="Platform_1x15" instance=ExtResource( 7 )]
-transform = Transform( 0.642788, 0, -0.766044, 0, 1, 0, 0.766044, 0, 0.642788, 0, 0, 0 )
-fire_rate = 2.0
-bullet_speed = 6.0
-
-[node name="Platform_1x16" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 5.7257, 15.5 )
-
-[node name="Turret" parent="Platform_1x16" instance=ExtResource( 7 )]
-transform = Transform( -0.766044, 0, -0.642788, 0, 1, 0, 0.642788, 0, -0.766044, 0, 0, 0 )
-fire_rate = 2.0
-bullet_speed = 2.0
-
-[node name="Platform_1x17" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 5.7257, 15.5 )
-
-[node name="Turret" parent="Platform_1x17" instance=ExtResource( 7 )]
-transform = Transform( -0.644628, -0.000895417, 0.764496, 0.000392325, 0.999999, 0.00150208, -0.764496, 0.00126822, -0.644627, 0.00716305, 1.00136e-05, -0.0101461 )
-fire_rate = 2.0
-bullet_speed = 2.0
-
-[node name="Platform_1x18" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 5.7257, 5.5 )
-
-[node name="Turret" parent="Platform_1x18" instance=ExtResource( 7 )]
-transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 0, 0, 0 )
-fire_rate = 2.0
-bullet_speed = 2.0
-
-[node name="Platform_1x19" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 5.7257, 5.5 )
-
-[node name="Turret" parent="Platform_1x19" instance=ExtResource( 7 )]
-transform = Transform( 0.642788, 0, -0.766044, 0, 1, 0, 0.766044, 0, 0.642788, 0, 0, 0 )
-fire_rate = 2.0
-bullet_speed = 2.0
-
-[node name="CircularDoor" parent="." instance=ExtResource( 4 )]
-transform = Transform( 3, 0, 0, 0, -1.31134e-07, 0.2, 0, -3, -8.74228e-09, 1.49012e-08, 21.7257, 10.5 )
-script = ExtResource( 8 )
-
-[node name="Platform_1x1" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 0.2, 6.55671e-08, 0, 2.62268e-08, 2, 3, 21.7456, 7.4 )
-
-[node name="Platform_1x2" parent="Platform_1x1" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0 )
-
-[node name="Platform_1x3" parent="Platform_1x1" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0 )
-
-[node name="Platform_1x4" parent="Platform_1x1" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0 )
-
-[node name="Platform_1x5" parent="Platform_1x1" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1 )
-
-[node name="Platform_1x6" parent="Platform_1x1" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2 )
-
-[node name="Platform_1x7" parent="Platform_1x1" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3 )
-
-[node name="Platform_1x8" parent="Platform_1x1" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3 )
-
-[node name="Platform_1x9" parent="Platform_1x1" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3 )
-
-[node name="Platform_1x10" parent="Platform_1x1" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
-
-[node name="Platform_1x11" parent="Platform_1x1" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
-
-[node name="Platform_1x12" parent="Platform_1x1" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
-
-[node name="Platform_1x14" parent="Platform_1x1" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1 )
-
-[node name="Platform_1x15" parent="Platform_1x1" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2 )
-
-[node name="Platform_1x16" parent="Platform_1x1" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2 )
-
-[node name="Turret5" parent="." instance=ExtResource( 7 )]
-transform = Transform( 0.9, 0, 0, 0, 0.9, -8.41993e-13, 0, 7.10543e-15, 1, -1, 17.7257, 11.5 )
-fire_rate = 3.0
-bullet_speed = 2.0
-
-[node name="CircularDoor2" parent="." instance=ExtResource( 4 )]
-transform = Transform( 3, 0, 0, 0, -1.31134e-07, 0.2, 0, -3, -8.74228e-09, -1, 17.7257, 11.5 )
-script = ExtResource( 8 )
-angular_velocity = -1.0
-
-[node name="Platform_1x4" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 0.2, 6.55671e-08, 0, 2.62268e-08, 2, 3, 17.7456, 7.4 )
-
-[node name="Platform_1x2" parent="Platform_1x4" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0 )
-
-[node name="Platform_1x3" parent="Platform_1x4" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0 )
-
-[node name="Platform_1x4" parent="Platform_1x4" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0 )
-
-[node name="Platform_1x5" parent="Platform_1x4" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1 )
-
-[node name="Platform_1x7" parent="Platform_1x4" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3 )
-
-[node name="Platform_1x8" parent="Platform_1x4" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3 )
-
-[node name="Platform_1x9" parent="Platform_1x4" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3 )
-
-[node name="Platform_1x10" parent="Platform_1x4" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
-
-[node name="Platform_1x11" parent="Platform_1x4" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
-
-[node name="Platform_1x12" parent="Platform_1x4" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
-
-[node name="Platform_1x13" parent="Platform_1x4" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1 )
-
-[node name="Platform_1x14" parent="Platform_1x4" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1 )
-
-[node name="Platform_1x15" parent="Platform_1x4" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2 )
-
-[node name="Platform_1x16" parent="Platform_1x4" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2 )
+transform = Transform( 1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 27, -28 )
 
 [node name="Turret" parent="." instance=ExtResource( 7 )]
-transform = Transform( 0.9, 0, 0, 0, 0.9, -8.52651e-13, 0, 3.55271e-15, 1, 1, 13.7257, 9.5 )
-fire_rate = 3.0
-bullet_speed = 2.0
-
-[node name="CircularDoor3" parent="." instance=ExtResource( 4 )]
-transform = Transform( 3, 0, 0, 0, -1.31134e-07, 0.2, 0, -3, -8.74228e-09, 1, 13.7257, 9.5 )
-script = ExtResource( 8 )
-angular_velocity = 1.5
-
-[node name="Platform_1x7" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 0.2, 6.55671e-08, 0, 2.62268e-08, 2, 3, 13.7456, 7.4 )
-
-[node name="Platform_1x2" parent="Platform_1x7" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0 )
-
-[node name="Platform_1x3" parent="Platform_1x7" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0 )
-
-[node name="Platform_1x4" parent="Platform_1x7" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0 )
-
-[node name="Platform_1x5" parent="Platform_1x7" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1 )
-
-[node name="Platform_1x6" parent="Platform_1x7" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2 )
-
-[node name="Platform_1x7" parent="Platform_1x7" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3 )
-
-[node name="Platform_1x8" parent="Platform_1x7" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3 )
-
-[node name="Platform_1x9" parent="Platform_1x7" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3 )
-
-[node name="Platform_1x10" parent="Platform_1x7" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
-
-[node name="Platform_1x11" parent="Platform_1x7" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
-
-[node name="Platform_1x13" parent="Platform_1x7" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1 )
-
-[node name="Platform_1x14" parent="Platform_1x7" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1 )
-
-[node name="Platform_1x15" parent="Platform_1x7" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2 )
-
-[node name="Platform_1x16" parent="Platform_1x7" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 27, -14 )
+fire_rate = 5.0
+bullet_speed = 20.0
 
 [node name="Turret2" parent="." instance=ExtResource( 7 )]
-transform = Transform( 0.9, 0, 0, 0, 0.9, -8.52651e-13, 0, 3.55271e-15, 1, 1, 9.72574, 11.5 )
-fire_rate = 3.0
-bullet_speed = 2.0
-
-[node name="CircularDoor4" parent="." instance=ExtResource( 4 )]
-transform = Transform( 3, 0, 0, 0, -1.31134e-07, 0.2, 0, -3, -8.74228e-09, 1, 9.72574, 11.5 )
-script = ExtResource( 8 )
-angular_velocity = -1.5
-
-[node name="Platform_1x8" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 0.2, 6.55671e-08, 0, 2.62268e-08, 2, 3, 9.74557, 7.4 )
-
-[node name="Platform_1x2" parent="Platform_1x8" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0 )
-
-[node name="Platform_1x3" parent="Platform_1x8" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0 )
-
-[node name="Platform_1x4" parent="Platform_1x8" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0 )
-
-[node name="Platform_1x5" parent="Platform_1x8" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1 )
-
-[node name="Platform_1x6" parent="Platform_1x8" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2 )
-
-[node name="Platform_1x7" parent="Platform_1x8" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3 )
-
-[node name="Platform_1x8" parent="Platform_1x8" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3 )
-
-[node name="Platform_1x9" parent="Platform_1x8" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3 )
-
-[node name="Platform_1x10" parent="Platform_1x8" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
-
-[node name="Platform_1x11" parent="Platform_1x8" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
-
-[node name="Platform_1x12" parent="Platform_1x8" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
-
-[node name="Platform_1x13" parent="Platform_1x8" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1 )
-
-[node name="Platform_1x16" parent="Platform_1x8" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2 )
-
-[node name="Platform_1x14" parent="Platform_1x8" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2, 27, -12 )
+fire_rate = 5.0
+bullet_speed = 20.0
 
 [node name="Turret3" parent="." instance=ExtResource( 7 )]
-transform = Transform( 0.9, 0, 0, 0, 0.9, -8.52651e-13, 0, 3.55271e-15, 1, -1, 5.72574, 9.5 )
-fire_rate = 3.0
-bullet_speed = 2.0
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 27, -12 )
+fire_rate = 5.0
+bullet_speed = 20.0
 
-[node name="CircularDoor5" parent="." instance=ExtResource( 4 )]
-transform = Transform( 3, 0, 0, 0, -1.31134e-07, 0.2, 0, -3, -8.74228e-09, -1, 5.72574, 9.5 )
-script = ExtResource( 8 )
-angular_velocity = 2.0
+[node name="Platform_1x3" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, -5.32907e-15, 0, 1, 0, 1.06581e-14, 0, 0.5, 0, 27, -14 )
 
-[node name="Platform_1x9" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 0.2, 6.55671e-08, 0, 2.62268e-08, 2, 3, 5.74557, 7.4 )
-
-[node name="Platform_1x2" parent="Platform_1x9" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0 )
-
-[node name="Platform_1x4" parent="Platform_1x9" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0 )
-
-[node name="Platform_1x5" parent="Platform_1x9" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1 )
-
-[node name="Platform_1x6" parent="Platform_1x9" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2 )
-
-[node name="Platform_1x7" parent="Platform_1x9" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3 )
-
-[node name="Platform_1x8" parent="Platform_1x9" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3 )
-
-[node name="Platform_1x9" parent="Platform_1x9" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3 )
-
-[node name="Platform_1x10" parent="Platform_1x9" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
-
-[node name="Platform_1x11" parent="Platform_1x9" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
-
-[node name="Platform_1x12" parent="Platform_1x9" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
-
-[node name="Platform_1x13" parent="Platform_1x9" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1 )
-
-[node name="Platform_1x14" parent="Platform_1x9" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1 )
-
-[node name="Platform_1x15" parent="Platform_1x9" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2 )
-
-[node name="Platform_1x16" parent="Platform_1x9" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2 )
+[node name="Platform_1x4" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, -5.32907e-15, 0, 1, 0, 1.06581e-14, 0, 0.5, 2, 27, -12 )
 
 [node name="Turret4" parent="." instance=ExtResource( 7 )]
-transform = Transform( 0.9, 0, 0, 0, 0.9, -8.52651e-13, 0, 3.55271e-15, 1, 1.49012e-08, 1.72574, 10.5 )
-fire_rate = 3.0
-bullet_speed = 2.0
+transform = Transform( -0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 5, 24, -12 )
+fire_rate = 5.0
+bullet_speed = 20.0
 
-[node name="CircularDoor6" parent="." instance=ExtResource( 4 )]
-transform = Transform( 3, 0, 0, 0, -1.31134e-07, 0.2, 0, -3, -8.74228e-09, 1.49012e-08, 1.72574, 10.5 )
-script = ExtResource( 8 )
-angular_velocity = -2.0
+[node name="Platform_1x6" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.707107, 0, 0.353553, 0, 1, 0, -0.707107, 0, 0.353553, 5, 24, -12 )
 
-[node name="Platform_1x32" parent="." instance=ExtResource( 3 )]
-transform = Transform( 5, 0, 0, 0, 0.2, -6.5567e-07, 0, 2.62268e-08, 5, -1, -0.25443, 11.4 )
+[node name="Turret5" parent="." instance=ExtResource( 7 )]
+transform = Transform( -0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -6, 24, -12 )
+fire_rate = 5.0
+bullet_speed = 20.0
 
-[node name="FinishHole" parent="Platform_1x32" instance=ExtResource( 11 )]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
+[node name="Platform_1x7" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.707107, 0, -0.353553, 0, 1, 0, 0.707107, 0, 0.353553, -6, 24, -12 )
 
-[node name="Platform_1x10" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 0.2, 6.55671e-08, 0, 2.62268e-08, 2, 3, 1.74557, 7.4 )
+[node name="Turret6" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0, 0, 1, 0, 1, 0, -1, 0, 0, -6, 21, -16 )
+fire_rate = 5.0
+bullet_speed = 20.0
 
-[node name="Platform_1x2" parent="Platform_1x10" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0 )
+[node name="Platform_1x8" parent="." instance=ExtResource( 5 )]
+transform = Transform( -5.96046e-08, 0, -0.5, 0, 1, 0, 1, 0, -2.98023e-08, -6, 21, -16 )
 
-[node name="Platform_1x3" parent="Platform_1x10" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0 )
+[node name="Platform_1x5" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, -5.32907e-15, 0, 1, 0, 1.06581e-14, 0, 0.5, -2, 27, -12 )
 
-[node name="Platform_1x4" parent="Platform_1x10" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0 )
+[node name="Turret9" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 9, 19, -14 )
+fire_rate = 5.0
+bullet_speed = 20.0
 
-[node name="Platform_1x5" parent="Platform_1x10" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1 )
+[node name="Turret10" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 9, 19, -18 )
+fire_rate = 5.0
+bullet_speed = 20.0
 
-[node name="Platform_1x6" parent="Platform_1x10" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2 )
+[node name="Platform_1x11" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 0.5, 0, 1, 0, -1, 0, -2.18557e-08, 9, 19, -18 )
 
-[node name="Platform_1x7" parent="Platform_1x10" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3 )
+[node name="Platform_1x12" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 0.5, 0, 1, 0, -1, 0, -2.18557e-08, 9, 19, -14 )
 
-[node name="Platform_1x8" parent="Platform_1x10" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3 )
+[node name="Turret7" parent="." instance=ExtResource( 7 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 31, -23 )
+fire_rate = 5.0
+bullet_speed = 20.0
 
-[node name="Platform_1x9" parent="Platform_1x10" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3 )
+[node name="Platform_1x9" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -0.5, 0, 1, 0, 1, 0, -2.18557e-08, -5, 31, -23 )
 
-[node name="Platform_1x10" parent="Platform_1x10" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
+[node name="Turret8" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 5, 31, -23 )
+fire_rate = 5.0
+bullet_speed = 20.0
 
-[node name="Platform_1x11" parent="Platform_1x10" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
+[node name="Platform_1x10" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 0.5, 0, 1, 0, -1, 0, -2.18557e-08, 5, 31, -23 )
 
-[node name="Platform_1x12" parent="Platform_1x10" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
-
-[node name="Platform_1x13" parent="Platform_1x10" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1 )
-
-[node name="Platform_1x14" parent="Platform_1x10" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1 )
-
-[node name="Platform_1x16" parent="Platform_1x10" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2 )
-
-[node name="Elevator" parent="." instance=ExtResource( 9 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9, 26, 7 )
-speed = 2.0
-orientation = -1.0
-timer = 4.0
-
-[node name="Pipe_Quarter" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 23.5, 10 )
+[node name="Ball" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 27.9619, -30 )

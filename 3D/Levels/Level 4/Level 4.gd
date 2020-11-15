@@ -18,10 +18,6 @@ func _process(delta):
 		$Turret4.look_at($"Ball".rb.global_transform.origin,Vector3(0,1,0))
 		$Turret5.look_at($"Ball".rb.global_transform.origin,Vector3(0,1,0))
 		$Turret6.look_at($"Ball".rb.global_transform.origin,Vector3(0,1,0))
-		$Turret7.look_at($"Ball".rb.global_transform.origin,Vector3(0,1,0))
-		$Turret8.look_at($"Ball".rb.global_transform.origin,Vector3(0,1,0))
-		$Turret9.look_at($"Ball".rb.global_transform.origin,Vector3(0,1,0))
-		$Turret10.look_at($"Ball".rb.global_transform.origin,Vector3(0,1,0))
 	pass
 
 func rotate_turret(t : Turret):
