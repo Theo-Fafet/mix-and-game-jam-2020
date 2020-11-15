@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/BallController.gd" type="Script" id=1]
 [ext_resource path="res://3D/Ball/Obj/Ball.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://3D/Ball/Materials/Core.material" type="Material" id=3]
 [ext_resource path="res://3D/Ball/Materials/Ball.material" type="Material" id=4]
 [ext_resource path="res://Scripts/FollowCamera.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/GlassBreak.gd" type="Script" id=7]
 
 [sub_resource type="SphereShape" id=1]
 radius = 0.25
@@ -38,4 +39,8 @@ transform = Transform( -1, 5.65816e-08, -3.20891e-07, -2.01424e-07, 0.666761, 0.
 script = ExtResource( 5 )
 targetPath = NodePath("../BallRB")
 smoothing = 4.0
+
+[node name="GlassBreak" type="AudioStreamPlayer" parent="."]
+script = ExtResource( 7 )
+[connection signal="on_break" from="." to="GlassBreak" method="_on_Ball_on_break"]
 [connection signal="body_entered" from="BallRB" to="." method="_on_BallRB_body_entered"]

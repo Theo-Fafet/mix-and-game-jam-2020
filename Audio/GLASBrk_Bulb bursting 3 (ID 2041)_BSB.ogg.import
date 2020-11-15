@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/GLASBrk_Bulb bursting 3 (ID 2041)_BSB.ogg-eb78ffa641d88592f857a938e5aaa067.oggstr"
+
+[deps]
+
+source_file="res://Audio/GLASBrk_Bulb bursting 3 (ID 2041)_BSB.ogg"
+dest_files=[ "res://.import/GLASBrk_Bulb bursting 3 (ID 2041)_BSB.ogg-eb78ffa641d88592f857a938e5aaa067.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

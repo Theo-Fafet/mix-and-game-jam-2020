@@ -2,10 +2,11 @@ extends Spatial
 class_name BallController
 
 export(float) var strength:float = 1
-
 var brokenPacked: PackedScene = preload("res://3D/Ball/Nodes/BrokenBall.tscn")
 
 onready var rb: RigidBody = $"BallRB" as RigidBody
+
+signal on_break;
 
 func _init():
 	randomize()
@@ -24,6 +25,7 @@ func _physics_process(_delta : float) -> void:
 	rb.add_torque(get_torque())
 
 func shatter() -> void:
+	emit_signal("on_break")
 	var broken = brokenPacked.instance()
 	get_parent().add_child(broken)
 	broken.transform = rb.transform
