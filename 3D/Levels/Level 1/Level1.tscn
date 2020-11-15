@@ -1,0 +1,135 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://3D/Levels/Props/Nodes/Platform_2x2.tscn" type="PackedScene" id=1]
+[ext_resource path="res://3D/Ball/Nodes/Ball.tscn" type="PackedScene" id=2]
+[ext_resource path="res://3D/Levels/Props/Nodes/Platform_1x1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://3D/Levels/Props/Nodes/Slope.tscn" type="PackedScene" id=4]
+[ext_resource path="res://3D/Levels/Props/Nodes/Platform_1x2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://3D/Levels/Props/Nodes/Wipers.tscn" type="PackedScene" id=6]
+[ext_resource path="res://3D/Ennemies/Turret/Nodes/Turret.tscn" type="PackedScene" id=7]
+[ext_resource path="res://3D/Levels/Props/Nodes/ascenceur.tscn" type="PackedScene" id=8]
+[ext_resource path="res://3D/Levels/Props/Nodes/FinishHole.tscn" type="PackedScene" id=9]
+[ext_resource path="res://3D/Levels/Example/Level 0.tscn" type="PackedScene" id=10]
+
+[sub_resource type="BoxShape" id=1]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Platform_1x1" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5 )
+
+[node name="Platform_1x2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5 )
+
+[node name="Platform_2x2" parent="." instance=ExtResource( 1 )]
+
+[node name="Slope" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1, 4 )
+
+[node name="Platform_1x3" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.84217e-14, -1, 6 )
+
+[node name="Platform_1x4" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.42109e-14, -1, 7 )
+
+[node name="Turret" parent="Platform_1x4" instance=ExtResource( 7 )]
+
+[node name="Platform_1x5" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, -1, 6.5 )
+
+[node name="Platform_1x6" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.5, -1, 6.5 )
+
+[node name="Platform_1x8" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, -1.5, 6.5 )
+
+[node name="Platform_1x9" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, -2, 6.5 )
+
+[node name="Platform_2x3" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.5, -2.5, 6.5 )
+
+[node name="Platform_1x2" parent="Platform_2x3" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, 0, 3.33786e-06 )
+
+[node name="Platform_1x3" parent="Platform_2x3" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 1.50001 )
+
+[node name="Platform_1x13" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2.5, 8.5 )
+
+[node name="Platform_1x14" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2.5, 10.5 )
+
+[node name="Platform_1x15" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2.5, 12.5 )
+
+[node name="Platform_1x16" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2.5, 14.5 )
+
+[node name="Platform_2x4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2.5, 16.5 )
+
+[node name="Slope" parent="Platform_2x4" instance=ExtResource( 4 )]
+transform = Transform( 2, 0, 0, 0, 0.5, 0, 0, 0, 0.4, 0, 0, 1.2 )
+
+[node name="Slope4" parent="Platform_2x4" instance=ExtResource( 4 )]
+transform = Transform( 0.707107, 0, 0.282843, 0, 0.5, 0, -0.707107, 0, 0.282843, 1.1, 0, 1 )
+
+[node name="Slope5" parent="Platform_2x4" instance=ExtResource( 4 )]
+transform = Transform( 0.707107, 0, -0.282843, 0, 0.5, 0, 0.707107, 0, 0.282843, -1.1, 0, 1 )
+
+[node name="Slope2" parent="Platform_2x4" instance=ExtResource( 4 )]
+transform = Transform( -8.74228e-08, 0, -0.4, 0, 0.5, 0, 2, 0, -1.74846e-08, -1.3, 0, 1.90735e-06 )
+
+[node name="Slope3" parent="Platform_2x4" instance=ExtResource( 4 )]
+transform = Transform( -8.74228e-08, 0, 0.4, 0, 0.5, 0, -2, 0, -1.74846e-08, 1.3, 0, 1.90735e-06 )
+
+[node name="FinishHole" parent="Platform_2x4" instance=ExtResource( 9 )]
+next_level = ExtResource( 10 )
+
+[node name="Platform_1x10" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.5, -2.5, 8.5 )
+
+[node name="Turret" parent="Platform_1x10" instance=ExtResource( 7 )]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 9.53674e-07 )
+fire_rate = 3.0
+bullet_speed = 2.0
+
+[node name="Platform_1x11" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.5, -2.5, 10.5 )
+
+[node name="Turret" parent="Platform_1x11" instance=ExtResource( 7 )]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 9.53674e-07 )
+fire_rate = 3.0
+bullet_speed = 2.0
+
+[node name="Platform_1x12" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.5, -2.5, 12.5 )
+
+[node name="Turret" parent="Platform_1x12" instance=ExtResource( 7 )]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 9.53674e-07 )
+fire_rate = 3.0
+bullet_speed = 2.0
+
+[node name="Platform_1x7" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.5, -1, 7.5 )
+
+[node name="Rotor" parent="Platform_1x7" instance=ExtResource( 6 )]
+transform = Transform( 0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 0, 0.2, 0 )
+angular_velocity = -0.7
+
+[node name="Elevator" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -3.3, 2 )
+speed = 1.0
+
+[node name="Ball" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
+
+[node name="DeathPlane" type="StaticBody" parent="."]
+transform = Transform( 100, 0, 0, 0, 1, 0, 0, 0, 100, 0, -7, 0 )
+collision_layer = 5
+collision_mask = 7
+
+[node name="CollisionShape" type="CollisionShape" parent="DeathPlane"]
+shape = SubResource( 1 )
