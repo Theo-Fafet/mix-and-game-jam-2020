@@ -45,7 +45,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Mix and Game Jam 2020"
-run/main_scene="res://3D/Levels/Example/ascenceur.tscn"
+run/main_scene="res://ExampleScene.tscn"
 config/icon="res://icon.png"
 
 [rendering]
