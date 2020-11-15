@@ -27,7 +27,7 @@ func _physics_process(_delta : float) -> void:
 func shatter() -> void:
 	emit_signal("on_break")
 	var broken = brokenPacked.instance()
-	get_parent().add_child(broken)
+	add_child(broken)
 	broken.transform = rb.transform
 	($Camera as FollowCamera).target = null
 	for p in broken.get_children():
