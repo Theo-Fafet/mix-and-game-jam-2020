@@ -1,30 +1,9 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=2]
-
-[sub_resource type="Shader" id=1]
-code = "shader_type spatial;
-
-uniform vec4 colorA : hint_color;
-uniform vec4 colorB : hint_color;
-uniform float scale;
-uniform vec2 offset;
-
-float checker(vec2 uv)
-{
-  float checkSize = 2.0;
-  float fmodResult = mod(floor(checkSize * uv.x) + floor(checkSize * uv.y), 2.0);
-  return max(sign(fmodResult), 0.0);
-}
-
-void fragment() {
-	vec4 pos = CAMERA_MATRIX * vec4(VERTEX.x, VERTEX.y, VERTEX.z, 1);
-	float x = checker(pos.xz * scale + offset);
-	ALBEDO = x * colorA.rgb + (1.0-x) * colorB.rgb;
-}
-"
+[gd_resource type="SpatialMaterial" format=2]
 
 [resource]
-shader = SubResource( 1 )
-shader_param/colorA = Color( 0.0470588, 0.0509804, 0.0470588, 1 )
-shader_param/colorB = Color( 1, 1, 1, 1 )
-shader_param/scale = 0.499
-shader_param/offset = Vector2( 0.25, 0.01 )
+albedo_color = Color( 0.462745, 0.498039, 0.466667, 1 )
+metallic_specular = 0.0
+ao_enabled = true
+ao_light_affect = 0.11
+ao_on_uv2 = false
+ao_texture_channel = 0
