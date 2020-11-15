@@ -117,24 +117,32 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7257, 15.5 )
 
 [node name="Turret" parent="Platform_1x28" instance=ExtResource( 5 )]
 transform = Transform( -0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, -0.939693, 0, 0, 0 )
+fire_rate = 2.0
+bullet_speed = 2.0
 
 [node name="Platform_1x29" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7257, 5.5 )
 
 [node name="Turret" parent="Platform_1x29" instance=ExtResource( 5 )]
 transform = Transform( 0.939693, 0, -0.34202, 0, 1, 0, 0.34202, 0, 0.939693, 0, 0, 0 )
+fire_rate = 2.0
+bullet_speed = 2.0
 
 [node name="Platform_1x30" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.7257, 10.5 )
 
 [node name="Turret" parent="Platform_1x30" instance=ExtResource( 5 )]
 transform = Transform( -0.34202, 0, -0.939693, 0, 1, 0, 0.939693, 0, -0.34202, 0, 0, 0 )
+fire_rate = 2.0
+bullet_speed = 2.0
 
 [node name="Platform_1x31" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.7257, 10.5 )
 
 [node name="Turret" parent="Platform_1x31" instance=ExtResource( 5 )]
 transform = Transform( 0.34202, 0, 0.939693, 0, 1, 0, -0.939693, 0, 0.34202, 0, 0, 0 )
+fire_rate = 2.0
+bullet_speed = 2.0
 
 [node name="Platform_1x5" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 21.7257, 15.5 )
