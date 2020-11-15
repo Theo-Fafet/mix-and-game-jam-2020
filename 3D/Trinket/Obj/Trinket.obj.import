@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Trinket.obj-986dbbec2d394ae9b42b74c30d84565a.mesh"
+
+[deps]
+
+files=[ "res://.import/Trinket.obj-986dbbec2d394ae9b42b74c30d84565a.mesh" ]
+
+source_file="res://3D/Trinket/Obj/Trinket.obj"
+dest_files=[ "res://.import/Trinket.obj-986dbbec2d394ae9b42b74c30d84565a.mesh", "res://.import/Trinket.obj-986dbbec2d394ae9b42b74c30d84565a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

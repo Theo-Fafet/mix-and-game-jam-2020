@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://3D/Levels/Props/Obj/Wipers.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://3D/Levels/Props/Scripts/Rotor.gd" type="Script" id=2]
+[ext_resource path="res://3D/Levels/Props/Materials/ConcreteMaterial.tres" type="Material" id=3]
 
 [sub_resource type="CylinderShape" id=1]
 margin = 0.001
@@ -18,7 +19,7 @@ script = ExtResource( 2 )
 
 [node name="Wipers" type="MeshInstance" parent="."]
 mesh = ExtResource( 1 )
-material/0 = null
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Wipers"]
 

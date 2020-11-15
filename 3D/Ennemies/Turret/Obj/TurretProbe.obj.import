@@ -15,4 +15,5 @@ dest_files=[ "res://.import/TurretProbe.obj-ee35229c7dcf8555fa58a1d116d01fd2.mes
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true
