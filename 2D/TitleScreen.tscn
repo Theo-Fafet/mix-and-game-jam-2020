@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://2D/Menu.gd" type="Script" id=1]
 [ext_resource path="res://3D/Ball/Nodes/Ball.tscn" type="PackedScene" id=2]
 [ext_resource path="res://3D/Levels/Props/Nodes/Platform_1x1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://2D/nebula-logo.png" type="Texture" id=4]
 
 [node name="Node" type="Node"]
 
@@ -28,16 +29,41 @@ __meta__ = {
 }
 
 [node name="Play" type="Button" parent="Control/Menu"]
-margin_top = 42.0
+margin_top = 33.0
 margin_right = 192.0
-margin_bottom = 62.0
+margin_bottom = 53.0
 text = "Play"
 
 [node name="Quit" type="Button" parent="Control/Menu"]
-margin_top = 66.0
+margin_top = 57.0
 margin_right = 192.0
-margin_bottom = 86.0
+margin_bottom = 77.0
 text = "Quit"
+
+[node name="Label2" type="Label" parent="Control/Menu"]
+margin_top = 81.0
+margin_right = 192.0
+margin_bottom = 95.0
+text = "Use your arrow keys to move"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+margin_left = 103.913
+margin_top = 523.837
+margin_right = 626.913
+margin_bottom = 562.837
+text = "Made by the StrangeNebula Team
+Choquard Anthony - Fafet Theo - Grauier Brice - Passin-Conneau Barthélémy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Control/Label"]
+position = Vector2( -38.2003, 8.81543 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 4 )
 
 [node name="Spatial" type="Spatial" parent="."]
 

@@ -63,13 +63,17 @@ _global_script_class_icons={
 [application]
 
 config/name="Mix and Game Jam 2020"
-run/main_scene="res://3D/Levels/Level 1/Level1.tscn"
+run/main_scene="res://2D/TitleScreen.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 MusicPlayer="*res://Audio/MusicPlayer.tscn"
 GlobalEnvironment="*res://3D/Environment/Terrain/GlobalEnvironment.tscn"
+
+[physics]
+
+3d/active_soft_world=false
 
 [rendering]
 

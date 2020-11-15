@@ -5,7 +5,7 @@
 [ext_resource path="res://3D/Levels/Props/Nodes/Platform_1x1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://3D/Levels/Props/Nodes/Elevator.tscn" type="PackedScene" id=4]
 [ext_resource path="res://3D/Ennemies/Turret/Nodes/Turret.tscn" type="PackedScene" id=5]
-[ext_resource path="res://3D/Levels/Level 5/Room Left.tscn" type="PackedScene" id=6]
+[ext_resource path="res://3D/Levels/Level 5/Level 5.tscn" type="PackedScene" id=6]
 [ext_resource path="res://3D/Levels/Props/Nodes/Pipe_Quarter.tscn" type="PackedScene" id=7]
 [ext_resource path="res://3D/Ball/Nodes/Ball.tscn" type="PackedScene" id=8]
 [ext_resource path="res://3D/Levels/Level 4/Level 4.gd" type="Script" id=9]
