@@ -16,7 +16,7 @@ func _on_Timer_timeout() -> void:
 func shoot() -> void:
 	var bullet = bulletPacked.instance();
 	bullet.velocity = bullet_speed * -$TurretBase/TurretProbe.transform.basis.z
-	bullet.translation = $TurretBase/TurretProbe.translation
+	bullet.translation = $TurretBase/TurretProbe.translation-0.5*$TurretBase/TurretProbe.transform.basis.z
 	call_deferred("add_child", bullet)
 	
 func rotate(axis:Vector3,angle: float) -> void:
