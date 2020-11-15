@@ -4,6 +4,10 @@ class_name Bullet
 onready var rb : RigidBody = $"BulletRB"
 
 var velocity : Vector3
+export (float) var timeout = 20
+
+func _on_ready():
+	$Timer.wait_time=timeout
 
 func _physics_process(delta : float) -> void:
 	rb.translation += velocity * delta
