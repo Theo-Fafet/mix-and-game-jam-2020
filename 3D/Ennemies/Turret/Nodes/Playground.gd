@@ -12,7 +12,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$Turret2.rotate(Vector3(0,1,0),clockwise * 2*PI/180)
-	$Turret3.look_at($"7x7 platform/Ball".rb.global_transform.origin,Vector3(0,1,0))
+	if($"7x7 platform/Ball".rb):
+		$Turret3.look_at($"7x7 platform/Ball".rb.global_transform.origin,Vector3(0,1,0))
 	pass
 
 func rotate_turret(t : Turret):
