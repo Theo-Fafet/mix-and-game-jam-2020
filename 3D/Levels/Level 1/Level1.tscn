@@ -7,9 +7,9 @@
 [ext_resource path="res://3D/Levels/Props/Nodes/Platform_1x2.tscn" type="PackedScene" id=5]
 [ext_resource path="res://3D/Levels/Props/Nodes/Wipers.tscn" type="PackedScene" id=6]
 [ext_resource path="res://3D/Ennemies/Turret/Nodes/Turret.tscn" type="PackedScene" id=7]
-[ext_resource path="res://3D/Levels/Props/Nodes/ascenceur.tscn" type="PackedScene" id=8]
+[ext_resource path="res://3D/Levels/Props/Nodes/Elevator.tscn" type="PackedScene" id=8]
 [ext_resource path="res://3D/Levels/Props/Nodes/FinishHole.tscn" type="PackedScene" id=9]
-[ext_resource path="res://3D/Levels/Example/Level 0.tscn" type="PackedScene" id=10]
+[ext_resource path="res://3D/Levels/Level 2/Level 2.tscn" type="PackedScene" id=10]
 
 [sub_resource type="BoxShape" id=1]
 
