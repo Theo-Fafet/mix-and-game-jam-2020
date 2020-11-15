@@ -23,6 +23,5 @@ func rotate_turret(t : Turret):
 
 
 func _on_ChangeRot_timeout():
-	print("timeout")
 	clockwise *= -1
 	pass # Replace with function body.
