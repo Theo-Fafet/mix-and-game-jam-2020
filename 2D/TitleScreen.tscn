@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://2D/Menu.gd" type="Script" id=1]
+[ext_resource path="res://3D/Ball/Nodes/Ball.tscn" type="PackedScene" id=2]
+[ext_resource path="res://3D/Levels/Props/Nodes/Platform_1x1.tscn" type="PackedScene" id=3]
+
+[node name="Node" type="Node"]
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="VBoxContainer" parent="Control"]
+margin_left = 704.0
+margin_top = 256.0
+margin_right = 896.0
+margin_bottom = 384.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="Control/Menu"]
+margin_top = 42.0
+margin_right = 192.0
+margin_bottom = 62.0
+text = "Play"
+
+[node name="Quit" type="Button" parent="Control/Menu"]
+margin_top = 66.0
+margin_right = 192.0
+margin_bottom = 86.0
+text = "Quit"
+
+[node name="Spatial" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 2, 2.5 )
+
+[node name="Ball" parent="Spatial" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0 )
+script = null
+
+[node name="Platform_1x1" parent="Spatial" instance=ExtResource( 3 )]
+[connection signal="pressed" from="Control/Menu/Play" to="Control/Menu" method="_on_Play_pressed"]
+[connection signal="pressed" from="Control/Menu/Quit" to="Control/Menu" method="_on_Quit_pressed"]

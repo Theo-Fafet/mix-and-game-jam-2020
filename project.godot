@@ -34,6 +34,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/GlassBreak.gd"
 }, {
+"base": "CanvasItem",
+"class": "Play",
+"language": "GDScript",
+"path": "res://2D/Menu.gd"
+}, {
 "base": "Spatial",
 "class": "Rotor",
 "language": "GDScript",
@@ -50,6 +55,7 @@ _global_script_class_icons={
 "FinishHole": "",
 "FollowCamera": "",
 "GlassBreak": "",
+"Play": "",
 "Rotor": "",
 "Turret": ""
 }
@@ -57,7 +63,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Mix and Game Jam 2020"
-run/main_scene="res://3D/Levels/Level 1/Level1.tscn"
+run/main_scene="res://2D/TitleScreen.tscn"
 config/icon="res://icon.png"
 
 [autoload]

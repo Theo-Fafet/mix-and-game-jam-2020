@@ -11,6 +11,10 @@ signal on_break;
 func _init():
 	randomize()
 
+func _process(_delta):
+	if (Input.is_action_pressed("ui_cancel")):
+		get_tree().change_scene_to(load("res://2D/TitleScreen.tscn"))
+
 func get_torque() -> Vector3: 
 	var right = Input.get_action_strength("ui_right")
 	var left = Input.get_action_strength("ui_left")
@@ -53,3 +57,4 @@ func restart() -> void:
 func _on_BallRB_body_entered(body : PhysicsBody):
 	if (body.collision_layer & 4 != 0):
 		shatter()
+
