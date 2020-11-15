@@ -32,8 +32,6 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.84217
 [node name="Platform_1x4" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.42109e-14, -1, 7 )
 
-[node name="Turret" parent="Platform_1x4" instance=ExtResource( 7 )]
-
 [node name="Platform_1x5" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, -1, 6.5 )
 
