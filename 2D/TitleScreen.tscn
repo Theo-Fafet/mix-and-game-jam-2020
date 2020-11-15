@@ -44,6 +44,7 @@ text = "Quit"
 margin_top = 81.0
 margin_right = 192.0
 margin_bottom = 95.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Use your arrow keys to move"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -54,6 +55,7 @@ margin_left = 103.913
 margin_top = 523.837
 margin_right = 626.913
 margin_bottom = 562.837
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Made by the StrangeNebula Team
 Choquard Anthony - Fafet Theo - Grauier Brice - Passin-Conneau Barthélémy"
 __meta__ = {

@@ -36,6 +36,7 @@ material/1 = ExtResource( 4 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -1, 5.65816e-08, -3.20891e-07, -2.01424e-07, 0.666761, 0.745272, 2.56126e-07, 0.745272, -0.666761, 0, 2.21838, -2.36259 )
+far = 1000.0
 script = ExtResource( 5 )
 targetPath = NodePath("../BallRB")
 smoothing = 4.0
